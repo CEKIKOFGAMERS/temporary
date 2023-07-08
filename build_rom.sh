@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/ArrowOS/android_manifest -b arrow-13.1 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-20.0 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/CEKIKOFGAMERS/local_manifest.git --depth 1 -b lavender .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
@@ -11,6 +11,7 @@ export BUILD_HOSTNAME=Kristo
 export KBUILD_USERNAME=Kristo
 export KBUILD_HOSTNAME=Kristo
 export TZ=Asia/Jakarta
+export ALLOW_MISSING_DEPENDENCIES=true
 m bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
